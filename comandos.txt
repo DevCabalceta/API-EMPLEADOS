@@ -1,0 +1,3 @@
+npm init --y   (Crear archivo package.json)
+node .  (Ejecutar archivo index.js)
+npm i express  (Para instalar express y luego pegar el codigo de pagina en el index)

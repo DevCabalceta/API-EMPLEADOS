@@ -1,0 +1,16 @@
+{
+  "name": "api-rest-empleado",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "API REST que maneje la gestión de empleados",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
