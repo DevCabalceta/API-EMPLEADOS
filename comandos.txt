@@ -1,3 +1,27 @@
-npm init --y   (Crear archivo package.json)
-node .  (Ejecutar archivo index.js)
-npm i express  (Para instalar express y luego pegar el codigo de pagina en el index)
+Creacion de API REST con node express y typescript
+
+
+1. Instalar node desde la pagina oficial
+2. Instalar typescript con el comando npm install -g typescript
+3. Crear index.js
+4. npm init --y   (Crear archivo package.json)
+5. node .  (Ejecutar archivo index.js)
+6. npm i express  (Para instalar express y luego pegar el codigo de la pagina en el index y ponerle import express from 'express')
+7. Instalar nodemon con npm install --save-dev nodemon  (Esto es para no estar reiniciando el sercidor, instalarlo como dependecia de desarrollo)
+8. Crear carpeta src y mover el index.js y cambiar la ruta en el packge.json
+9. En el package.json poner este script  "dev": "nodemon ./src"
+10. Ejecutar comando npm run dev  (Ya con esto no hay que estar reiniciando el servidor)
+11. Instalar npm install -D ts-node  (Para Ejecutar archivos typescript, instalarlo como dependecia de desarrollo)
+12. tsc --init (Para crear archivo de configuracion de typescript)
+13. En el archivo de configuracion ts habilitar el "outDir": "./dist"
+14. En la carpeta src crear un archivo.ts (Para pruebas)
+15. npx ts-node .\src\calculadora.ts  (Comando para ejecutar archivos ts y poner la ruta)
+16. El index.js pasarlo a index.ts y ejecutar npm i --save-dev @types/express
+17. Crear un archivo nodemon.json y poner lo siguiente:
+                                                            {
+                                                                "watch": ["src"],
+                                                                "ext": "ts,json",
+                                                                "ignore": ["src/**/*.spec.ts"],
+                                                                "exec": "ts-node ./src/index.ts"
+                                                            }
+18. En el package.jason en la parte de scripts antes del "dev" poner ["build": "tsc","start": "node ./dist/index.js",] 

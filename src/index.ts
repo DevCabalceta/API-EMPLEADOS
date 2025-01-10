@@ -1,14 +1,14 @@
-import express from 'express'
+import express, { Request, Response} from 'express'
 const app = express()
 
-app.get('/', function (require, response) {
+app.get('/', function (req:Request, res:Response) {
 
     const persona = {
         name: "Gabriel",
-        age: 23
+        age: 25
     }
 
-    response.json(persona)
+    res.json(persona)
 })
 
 app.listen(3000, () => {
