@@ -1,16 +1,22 @@
-import express, { Request, Response} from 'express'
-const app = express()
+import express from 'express';
+import dotenv from 'dotenv';
+import morgan from 'morgan';
 
-app.get('/', function (req:Request, res:Response) {
+import routerEmpleado from './routes/empleado'
 
-    const persona = {
-        name: "Gabriel",
-        age: 25
-    }
+const app = express();
 
-    res.json(persona)
-})
+/* Config */
+dotenv.config();
+app.use(morgan("tiny"))
+app.set("port", process.env.PORT || 5000);
 
-app.listen(3000, () => {
-    console.log("Server on port 3000")
+/* routes*/
+app.use('/empleado', routerEmpleado);
+
+/* Start */
+const port = app.get("port");
+
+app.listen(port, () => {
+    console.log(`Server on port ${port}`);
 })

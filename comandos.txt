@@ -1,5 +1,5 @@
 Creacion de API REST con node express y typescript
-
+Instalar json viewer pro en chrome (opcional)
 
 1. Instalar node desde la pagina oficial
 2. Instalar typescript con el comando npm install -g typescript
@@ -25,3 +25,12 @@ Creacion de API REST con node express y typescript
                                                                 "exec": "ts-node ./src/index.ts"
                                                             }
 18. En el package.jason en la parte de scripts antes del "dev" poner ["build": "tsc","start": "node ./dist/index.js",] 
+19. Crear archivo llamado .env y poner PORT=5000
+20. Instalar dotenv npm con el comando npm install dotenv --save
+21. En el index poner lo siguiente: 
+                                        import dotenv from 'dotenv'
+                                        dotenv.config()
+
+22. Instalar morgan npm con npm i morgan
+23. Ir a la pagina de supabase
+QXrNoWS5jwiq1qL5
