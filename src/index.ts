@@ -8,11 +8,12 @@ const app = express();
 
 /* Config */
 dotenv.config();
-app.use(morgan("tiny"))
+app.use(morgan("tiny"));
+app.use(express.json());
 app.set("port", process.env.PORT || 5000);
 
 /* routes*/
-app.use('/empleado', routerEmpleado);
+app.use('/api/v1/empleado', routerEmpleado);
 
 /* Start */
 const port = app.get("port");

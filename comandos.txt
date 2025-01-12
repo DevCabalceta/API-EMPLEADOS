@@ -33,4 +33,6 @@ Instalar json viewer pro en chrome (opcional)
 
 22. Instalar morgan npm con npm i morgan
 23. Ir a la pagina de supabase
-QXrNoWS5jwiq1qL5
+24. Password de la base de datos  QXrNoWS5jwiq1qL5
+25. Crear base de datos
+26. Instalar paquete en este caso con npm install @supabase/supabase-js
